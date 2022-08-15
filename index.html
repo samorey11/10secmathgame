@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <title>10 Second Math Game</title>
+  </head>
+  <body>
+    <h1>10 Second Math Game</h1>
+    <div></div>
+    <div class="number-limit-container">
+      <h2 class="text-center border-bottom">Number Limit</h2>
+      <div class="row">
+        <div class="text-center">
+          <input class="number-limit" type="checkbox" checked>10;
+          <input class="number-limit" type="checkbox">20;
+          <input class="number-limit" type="checkbox">30;
+          <input class="number-limit" type="checkbox">40;
+          <input class="number-limit" type="checkbox">50;
+        </div>
+      </div>
+    </div>
+    <div class="game-container">
+      <div class="row">
+        <div class="col-xs-4 text-center">
+          <h3>Current Score:</h3>
+          <p>**FROM DOM**</p>
+        </div>
+        <div class="col-xs-4 text-center">
+          <h3>Solve the Following:</h3>
+          <p id="new-question"><input type="text" name="answer"/></p>
+          <p>Remaining Time</p>
+          <p>**TIMER**</p>
+        </div>
+        <div class="col-xs-4 text-center">
+          <h3>High Score:</h3>
+          <p>**FROM DOM**</p>
+        </div>
+      </div>
+    </div>
+  </body>
