@@ -7,8 +7,8 @@ $(document).ready(function() {
   var value = 10;
   
   var maxValue = function () {
-    if(document.getElementById('ten').checked) {
-      value = document.getElementById('ten').value;
+    if(document.getElementById('fifteen').checked) {
+      value = document.getElementById('fifteen').value;
     } else if(document.getElementById('twenty').checked) {
       value = document.getElementById('twenty').value
     } else if(document.getElementById('thirty').checked) {
@@ -30,6 +30,7 @@ $(document).ready(function() {
     if (!interval) {
       if (timeRemaining === 0) {
         updateRemainingTime(10);
+        $('body').css('background-color', 'green');
       }
       interval = setInterval(function() {
         updateRemainingTime(-1);
@@ -46,7 +47,9 @@ $(document).ready(function() {
         } else if(timeRemaining === 2) {
           $('body').css('background-color', 'orange');
         } else if(timeRemaining === 1) {
-          $('body').css('background-color', 'red')
+          $('body').css('background-color', 'red');
+        } else if(timeRemaining === 0 || !interval) {
+          $('body').css('background-color', 'green');
         };
         
         console.log(timeRemaining);
@@ -80,7 +83,12 @@ $(document).ready(function() {
   var checkResult = function(userInput, answer) {
     if (userInput === answer) {
       inputNewQuestion();
+      if (timeRemaining >= 10) {
+        updateRemainingTime(0);
+      } else {
       updateRemainingTime(+1);
+      };
+
       $('#userAnswer').val('');
       gameScore++;
       $('.gameScore').text('');

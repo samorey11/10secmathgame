@@ -13,13 +13,14 @@
     <title>10 Second Math Game</title>
   </head>
   <body>
-    <h1>10 Second Math Game</h1>
-    <div></div>
+    <div>
+      <h1 class="text-center">10 Second</br>Math</br>Game</h1>
+    </div>
     <div class="number-limit-container">
       <h2 class="text-center border-bottom">Number Limit</h2>
       <div class="row">
-        <div class="text-center">
-            <input class="number-limit" id="ten" type="radio" name="maxvalue" value="10">10
+        <div class="number-max text-center">
+            <input class="number-limit" id="fifteen" type="radio" name="maxvalue" value="15">15
             <input class="number-limit" id="twenty" type="radio" name="maxvalue" value="20">20
             <input class="number-limit" id="thirty" type="radio" name="maxvalue" value="30">30
             <input class="number-limit" id="fourty" type="radio" name="maxvalue" value="40">40
@@ -29,25 +30,27 @@
     </div>
     <div class="game-container">
       <div class="row">
-        <div class="col-xs-4 text-center">
-          <h3>Current Score:</h3>
-          <div class="gameScore"></div>
+        <div class="col-xs-3 text-center">
+          <h3 class="border-bottom" id="score">Current</br>Score</h3>
+          <div class="gameScore" id="score-text"></div>
         </div>
-        <div class="col-xs-4 text-center">
-          <h3>Solve the Following:</h3>
+        <div class="col-xs-6 text-center" id="game-focus">
+          <h3 id="solve">Solve</h3>
           <div id="new-question">
-          </div><div class="answer"><input type="number" id="userAnswer" name="sum"/></div>
+          </div><div class="answer"><input class="text-center" type="number" id="userAnswer" name="sum"/></div>
+          <h3 id="solve">Time</h3>
+          <p><span id="timer">0:10</span></p>
         </div>
-        <div class="col-xs-4 text-center">
-          <h3>High Score:</h3>
-          <div class="highScore"></div>
+        <div class="col-xs-3 text-center">
+          <h3 class="border-bottom" id="score">High</br>Score</h3>
+          <div class="highScore" id="score-text"></div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-xs-12 text-center">
-          <p>Remaining Time</p>
+      <!-- <div class="row">
+        <div class="col-xs-12 text-center" id="game-focus">
+          <h3 id="solve">Remaining Time</h3>
           <p><span id="timer">0:10</span> seconds</p>
         </div>
-      </div>
+      </div> -->
     </div>
   </body>
