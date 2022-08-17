@@ -19,20 +19,11 @@
       <h2 class="text-center border-bottom">Number Limit</h2>
       <div class="row">
         <div class="text-center">
-          <label for="ten">
-            <input id="number-limit" type="checkbox" name="ten" value="10" checked>10
-          </label>
-          <label for="twenty">
-            <input id="number-limit" type="checkbox" name="twenty" value="20">20
-          </label>
-          <label for="thirty">
-            <input id="number-limit" type="checkbox" name="thirty" value="30">30
-          </label>
-          <label for="fourty">
-            <input id="number-limit" type="checkbox" name="fourty" value="40">40
-          </label>
-          <label for="fifty">
-            <input id="number-limit" type="checkbox" name="fifty" value="50">50
+            <input class="number-limit" id="ten" type="radio" name="maxvalue" value="10">10
+            <input class="number-limit" id="twenty" type="radio" name="maxvalue" value="20">20
+            <input class="number-limit" id="thirty" type="radio" name="maxvalue" value="30">30
+            <input class="number-limit" id="fourty" type="radio" name="maxvalue" value="40">40
+            <input class="number-limit" id="fifty" type="radio" name="maxvalue" value="50">50
         </div>
       </div>
     </div>
@@ -40,7 +31,7 @@
       <div class="row">
         <div class="col-xs-4 text-center">
           <h3>Current Score:</h3>
-          <p>**FROM DOM**</p>
+          <div class="gameScore"></div>
         </div>
         <div class="col-xs-4 text-center">
           <h3>Solve the Following:</h3>
@@ -49,7 +40,7 @@
         </div>
         <div class="col-xs-4 text-center">
           <h3>High Score:</h3>
-          <p>**FROM DOM**</p>
+          <div class="highScore"></div>
         </div>
       </div>
       <div class="row">
