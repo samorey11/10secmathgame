@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link href="index.css" rel="stylesheet" type="text/css" />
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -13,13 +13,12 @@
     <title>10 Second Math Game</title>
   </head>
   <body>
-    <div>
-      <h1 class="text-center">10 Second</br>Math</br>Game</h1>
-    </div>
-    <div class="number-limit-container">
-      <h2 class="text-center border-bottom">Number Limit</h2>
+    <h1 class="text-center my-2">10 Second</br>Math Game</h1>
+    <div></div>
+    <div class="container text-center my-4 py-2" id="number-limit">
+      <h3>Number Limit</h3>
       <div class="row">
-        <div class="number-max text-center">
+        <div class="col-12">
             <input class="number-limit" id="fifteen" type="radio" name="maxvalue" value="15">15
             <input class="number-limit" id="twenty" type="radio" name="maxvalue" value="20">20
             <input class="number-limit" id="thirty" type="radio" name="maxvalue" value="30">30
@@ -28,29 +27,31 @@
         </div>
       </div>
     </div>
-    <div class="game-container">
+    <div class="flex-container flex-shrink text-center my-4 mx-4">
       <div class="row">
-        <div class="col-xs-3 text-center">
-          <h3 class="border-bottom" id="score">Current</br>Score</h3>
-          <div class="gameScore" id="score-text"></div>
+        <div class="col-3 flex-item flex-shrink-0" id="score">
+          <h3>Current</br> Score</h3>
+          <div class="gameScore"></div>
         </div>
-        <div class="col-xs-6 text-center" id="game-focus">
-          <h3 id="solve">Solve</h3>
+        <div class="col-6 flex-item px-1" id="game">
+          <h3>Solve</h3>
           <div id="new-question">
-          </div><div class="answer"><input class="text-center" type="number" id="userAnswer" name="sum"/></div>
-          <h3 id="solve">Time</h3>
-          <p><span id="timer">0:10</span></p>
+          </div>
+          <input type="number" id="userAnswer" name="sum"/>
+          <p>Remaining Time</p>
+          <p><span id="timer">0:10</span> seconds</p>
         </div>
-        <div class="col-xs-3 text-center">
-          <h3 class="border-bottom" id="score">High</br>Score</h3>
-          <div class="highScore" id="score-text"></div>
+        <div class="col-3 flex-item flex-shrink-0" id="score">
+          <h3>High</br>Score</h3>
+          <div class="highScore"></div>
         </div>
       </div>
-      <!-- <div class="row">
-        <div class="col-xs-12 text-center" id="game-focus">
-          <h3 id="solve">Remaining Time</h3>
+      <!--<div class="row">
+        <div class="col-xs-12 text-center">
+          <p>Remaining Time</p>
           <p><span id="timer">0:10</span> seconds</p>
         </div>
       </div> -->
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
   </body>
